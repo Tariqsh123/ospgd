@@ -196,7 +196,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.5
+    threshold: 0.2
 });
 
 observer.observe(section);
@@ -210,26 +210,24 @@ observer.observe(section);
 
         <div class="marquee-track">
 
-            <img src="https://pertc.org/images/collabration-logo-4.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-6.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-2.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-3.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-5.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-1.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/nipas2/images/logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/roayl-smart-institute/images/logo.png" alt="">
             <img src="https://pertc.org/images/logo.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
+            <img src="https://tariqsh123.github.io/nipas2/images/logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/roayl-smart-institute/images/logo.png" alt="">
+            <img src="https://pertc.org/images/logo.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
 
             <!-- duplicate for infinite loop -->
-            <img src="https://pertc.org/images/collabration-logo-4.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-6.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-2.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-3.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-5.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo-1.webp" alt="">
-            <img src="https://pertc.org/images/collabration-logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/nipas2/images/logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/roayl-smart-institute/images/logo.png" alt="">
             <img src="https://pertc.org/images/logo.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
+            <img src="https://tariqsh123.github.io/nipas2/images/logo.webp" alt="">
+            <img src="https://tariqsh123.github.io/roayl-smart-institute/images/logo.png" alt="">
+            <img src="https://pertc.org/images/logo.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
 
         </div>
 
@@ -757,7 +755,6 @@ questions.forEach((question) => {
 
 </div>
 <script>
-
 const chatToggle = document.getElementById("chatToggle");
 const chatWidget = document.getElementById("chatWidget");
 const closeChat = document.getElementById("closeChat");
@@ -773,19 +770,16 @@ closeChat.onclick = () => {
     chatWidget.classList.remove("active");
 };
 
-function addMessage(text,type){
-
+function addMessage(text, type) {
     const msg = document.createElement("div");
     msg.className = `message ${type}`;
     msg.innerHTML = text;
 
     chatBody.appendChild(msg);
-
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-function showTyping(){
-
+function showTyping() {
     const typing = document.createElement("div");
 
     typing.className = "typing";
@@ -798,79 +792,61 @@ function showTyping(){
     `;
 
     chatBody.appendChild(typing);
-
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-function removeTyping(){
-
+function removeTyping() {
     const typing = document.getElementById("typing");
 
-    if(typing){
+    if (typing) {
         typing.remove();
     }
-
 }
 
-function botReply(message){
-
+function botReply(message) {
     showTyping();
 
-    setTimeout(()=>{
-
+    setTimeout(() => {
         removeTyping();
 
         let reply =
-        "Thank you for contacting OSPGD. Our team will assist you shortly.";
+            "Thank you for contacting OSPGD. Our team will assist you shortly.";
 
         const text = message.toLowerCase();
 
-        if(text.includes("trade")){
-            reply = "We support Pakistan-Germany trade and business partnerships.";
+        if (text.includes("trade")) {
+            reply =
+                "We support Pakistan-Germany trade and business partnerships.";
+        } else if (text.includes("investment")) {
+            reply =
+                "We help investors connect with relevant opportunities and stakeholders.";
+        } else if (text.includes("contact")) {
+            reply =
+                "You can submit the contact form and our team will reach out soon.";
         }
 
-        else if(text.includes("investment")){
-            reply = "We help investors connect with relevant opportunities and stakeholders.";
-        }
-
-        else if(text.includes("contact")){
-            reply = "You can submit the contact form and our team will reach out soon.";
-        }
-
-        addMessage(reply,"bot");
-
-    },1500);
-
+        addMessage(reply, "bot");
+    }, 1500);
 }
 
-function sendMessage(){
-
+function sendMessage() {
     const text = userInput.value.trim();
 
-    if(!text) return;
+    if (!text) return;
 
-    addMessage(text,"user");
-
+    addMessage(text, "user");
     userInput.value = "";
 
     botReply(text);
-
 }
 
 sendBtn.onclick = sendMessage;
 
-userInput.addEventListener("keypress",(e)=>{
-
-    if(e.key === "Enter"){
+userInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
         sendMessage();
     }
-
 });
-
-setTimeout(()=>{
-    chatWidget.classList.add("active");
-},5000);
-
 </script>
 
 </body>
