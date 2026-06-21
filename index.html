@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Station Pak German Desk</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+<section class="topbar">
+    <div class="topbar-inner">
+
+        <div class="topbar-right">
+
+            <span class="topbar-text" id="typeText"></span>
+
+            <a href="#" class="topbar-btn">
+                Go To Trade
+            </a>
+
+        </div>
+
+    </div>
+</section>
+<script>
+  const text = "OSPGD • Pakistan–Germany Trade & Innovation Desk";
+const target = document.getElementById("typeText");
+
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        let speed = Math.floor(Math.random() * 60) + 60; 
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+window.addEventListener("load", () => {
+    setTimeout(typeWriter, 500);
+});
+</script>
+
+
+<!-- Navbar -->
+ <header class="navbar">
+    <div class="nav-container">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="images/logo.png" alt="OSPGD Logo">
+        </div>
+
+        <!-- MENU -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Trade</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- MOBILE SIDE MENU OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="side-menu" id="sideMenu">
+      <img src="images/logo.png" alt="">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Trade</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</header>
+<script>
+  const hamburger = document.getElementById("hamburger");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+</script>
+
+
+<!-- Hero Section  -->
+ <section class="hero">
+    <div class="hero-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-left">
+
+            <h1><span> One Station Pak– </span> <br> <span>German Desk </span> <br> <span> (OSPGD)</span></h1>
+
+            <!-- <h3>
+                A 360° Economic, Trade, Skills & Innovation Bridge Between Pakistan and Germany
+            </h3> -->
+
+            <p>OSPGD is a next-generation facilitation platform connecting trade, industry,
+                skills, education, innovation, and investment ecosystems between Pakistan and Germany.</p>
+            <p>We transform human capital into global opportunity and trade into structured economic growth.</p>
+
+            <a href="#" class="topbar-btn">
+                Join OSPGD Network
+            </a>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-right">
+            <img src="images/logo.png" alt="OSPGD Logo">
+        </div>
+
+    </div>
+</section>
+
+<!-- what we do -->
+ <section class="what-we-do">
+
+    <div class="w-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="w-left">
+            <img src="https://burst.shopifycdn.com/photos/business-team-meeting-boardroom.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="OSPGD Vision">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="w-right">
+
+            <h2>What We Do</h2>
+
+            <p class="w-intro">
+                One Station Pak–German Desk (OSPGD) operates as a 360° economic facilitation ecosystem
+                connecting Pakistan and Germany through structured trade, skills, innovation, and investment pathways.
+            </p>
+
+            <div class="w-grid">
+
+                <div class="w-card">
+                    <h3>Trade Facilitation</h3>
+                    <p>B2B matchmaking, import/export support & market entry solutions.</p>
+                </div>
+
+                <div class="w-card">
+                    <h3>Skilled Workforce</h3>
+                    <p>Germany-focused placements, apprenticeships & technical training pathways.</p>
+                </div>
+
+                <div class="w-card">
+                    <h3>Industrial Collaboration</h3>
+                    <p>Joint ventures, supply chain integration & technology transfer.</p>
+                </div>
+
+                <div class="w-card">
+                    <h3>Investment Support</h3>
+                    <p>Investor onboarding, project matching & feasibility advisory.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script>
+  const section = document.querySelector(".what-we-do");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            section.classList.add("active");
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+observer.observe(section);
+</script>
+
+<section class="logo-marquee">
+
+    <h2>Our Partners & <br> Collaborations</h2>
+
+    <div class="marquee">
+
+        <div class="marquee-track">
+
+            <img src="https://pertc.org/images/collabration-logo-4.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-6.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-2.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-3.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-5.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-1.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo.webp" alt="">
+            <img src="https://pertc.org/images/logo.webp" alt="">
+
+            <!-- duplicate for infinite loop -->
+            <img src="https://pertc.org/images/collabration-logo-4.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-6.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-2.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-3.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-5.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-7.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo-1.webp" alt="">
+            <img src="https://pertc.org/images/collabration-logo.webp" alt="">
+            <img src="https://pertc.org/images/logo.webp" alt="">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-simple">
+  <div class="why-simple-container">
+
+    <h2>Building a Strong Pakistan–Germany Connection</h2>
+
+    <p>
+      One Station Pak–German Desk (OSPGD) is a dedicated platform designed to strengthen economic, educational, and technological relations between Pakistan and Germany. We aim to create meaningful bridges that connect businesses, institutions, students, and professionals under one unified system of opportunity and growth.
+    </p>
+
+    <p>
+      Through structured collaboration, skill development programs, and international networking, we help individuals and organizations access global markets, modern training standards, and cross-border partnerships that lead to long-term success.
+    </p>
+
+    <p>
+      Our mission is to simplify international cooperation by providing a single, reliable hub where ideas turn into action, and connections turn into real opportunities.
+    </p>
+            <a href="#" class="msg-btn">Discover OSPGD</a>
+
+  </div>
+</section>
+
+
+<section class="impact">
+    <div class="impact-container">
+
+        <div class="impact-header">
+            <h2>Pakistan–Germany  <br>Economic Impact</h2>
+            <p>Building structured trade, skills and innovation ecosystems</p>
+        </div>
+
+        <div class="impact-grid">
+
+            <div class="impact-item">
+                <h3 class="counter" data-target="1000000000">0</h3>
+                <span>Trade Facilitation</span>
+            </div>
+
+            <div class="impact-item">
+                <h3 class="counter" data-target="10000">0</h3>
+                <span>Skilled Placements</span>
+            </div>
+
+            <div class="impact-item">
+                <h3 class="counter" data-target="500">0</h3>
+                <span>Industry Links</span>
+            </div>
+
+            <div class="impact-item">
+                <h3 class="counter" data-target="100000">0</h3>
+                <span>Professionals Trained</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const impactSection = document.querySelector(".impact");
+    const impactCounters = document.querySelectorAll(".counter");
+
+    if (!impactSection) return;
+
+    let impactStarted = false;
+
+    function impactFormat(num) {
+        if (num >= 1000000000) return (num / 1000000000).toFixed(1) + "B";
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
+        if (num >= 1000) return (num / 1000).toFixed(1) + "K";
+        return num;
+    }
+
+    function impactAnimate(counter) {
+        const target = +counter.getAttribute("data-target");
+        let current = 0;
+
+        const duration = 1800;
+        const steps = duration / 16;
+        const increment = target / steps;
+
+        function update() {
+            current += increment;
+
+            if (current < target) {
+                counter.innerText = impactFormat(Math.floor(current));
+                requestAnimationFrame(update);
+            } else {
+                counter.innerText = impactFormat(target);
+            }
+        }
+
+        update();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !impactStarted) {
+                impactStarted = true;
+
+                impactCounters.forEach(counter => {
+                    impactAnimate(counter);
+                });
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    observer.observe(impactSection);
+
+});
+</script>
+
+<section class="vision">
+
+    <div class="vision-container">
+
+        <!-- LEFT TEXT -->
+        <div class="vision-left">
+
+            <h2>A Strategic Economic Bridge for the Future</h2>
+
+            <p>
+                One Station Pak–German Desk (OSPGD) is not just a consultancy or platform.
+                It is a 360° economic facilitation ecosystem connecting Pakistan and Germany
+                through trade, skills, innovation, education, and investment.
+            </p>
+
+            <p>
+                We believe economies grow through people, trade grows through trust,
+                and innovation grows through collaboration.
+            </p>
+
+            <div class="vision-points">
+                <span>✔ Trade Expansion</span>
+                <span>✔ Skilled Workforce Mobility</span>
+                <span>✔ Industrial Collaboration</span>
+                <span>✔ Innovation & Investment</span>
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="vision-right">
+            <img src="https://img.magnific.com/premium-photo/global-e-commerce-digital-business-connectivity_1169301-26430.jpg?semt=ais_hybrid&w=740&q=80" alt="OSPGD Vision">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="process">
+  <div class="process-container">
+
+    <div class="process-header">
+      <h2>How OSPGD Works</h2>
+      <p>Simple 4-step process to connect Pakistan and Germany</p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <span class="step">01</span>
+        <h3>Connect</h3>
+        <p>Reach out to OSPGD through our platform or network channels.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step">02</span>
+        <h3>Consultation</h3>
+        <p>We understand your needs and identify the right opportunity.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step">03</span>
+        <h3>Matchmaking</h3>
+        <p>We connect you with verified partners in Pakistan and Germany.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step">04</span>
+        <h3>Execution</h3>
+        <p>We support execution, collaboration, and long-term growth.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="sectors">
+
+    <div class="sector-container">
+
+        <div class="sector-header">
+            <h2>Specialized Sectoral Desks</h2>
+            <p>Focused industry bridges connecting Pakistan and Germany</p>
+        </div>
+
+        <div class="sector-grid">
+
+            <div class="sector-card">
+                <i class="fa-solid fa-user-nurse"></i>
+                <h3>Healthcare & Nursing</h3>
+                <p>Germany healthcare placements and nursing pathways.</p>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>IT & Digital Economy</h3>
+                <p>Software export, remote jobs and tech collaboration.</p>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Engineering & Manufacturing</h3>
+                <p>Industrial workforce and technical partnerships.</p>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-car"></i>
+                <h3>Automotive Industry</h3>
+                <p>German automotive supply chain collaboration.</p>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-solar-panel"></i>
+                <h3>Renewable Energy</h3>
+                <p>Solar, wind and green tech partnerships.</p>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Education & Research</h3>
+                <p>Universities, exchange programs and training.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="message">
+
+    <div class="message-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="message-left">
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2025/03/GettyImages-2193895932-e1741620060114.jpg?w=1440&q=75" alt="OSPGD Message">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="message-right">
+
+            <h2>Message from OSPGD</h2>
+
+            <p>
+                One Station Pak–German Desk (OSPGD) is committed to building a structured
+                bridge between Pakistan and Germany in trade, skills, innovation, and investment.
+            </p>
+
+            <p>
+                Our mission is to transform potential into opportunity by connecting talent,
+                industries, and institutions through a 360° economic facilitation system.
+            </p>
+
+            <a href="#" class="msg-btn">Read More</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="faq">
+  <div class="faq-container">
+
+    <div class="faq-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about One Station Pak–German Desk (OSPGD)</p>
+    </div>
+
+    <div class="faq-box">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What is OSPGD?
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          One Station Pak–German Desk (OSPGD) is a 360° economic facilitation platform connecting Pakistan and Germany in trade, skills, innovation, and investment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Who can join OSPGD?
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          Businesses, students, professionals, investors, and institutions interested in Pakistan–Germany collaboration can join OSPGD.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is OSPGD a government organization?
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          No, OSPGD is an independent facilitation platform focused on economic and trade bridging between Pakistan and Germany.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How does OSPGD help in trade?
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          We provide B2B matchmaking, market entry support, import/export facilitation, and strategic partnerships.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I contact OSPGD?
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          You can use the contact form on the website or email us directly at info@ospgd.com
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<script>
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach((question) => {
+    const item = question.parentElement;
+
+    // CLICK (active toggle)
+    question.addEventListener("click", () => {
+
+        document.querySelectorAll(".faq-item").forEach((el) => {
+            if (el !== item) {
+                el.classList.remove("active");
+                el.querySelector(".faq-question").classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+        question.classList.toggle("active");
+    });
+
+    // HOVER EFFECT
+    question.addEventListener("mouseenter", () => {
+        question.classList.add("hover");
+    });
+
+    question.addEventListener("mouseleave", () => {
+        question.classList.remove("hover");
+    });
+});
+</script>
+<section class="cta-gold">
+
+    <div class="cta-gold-container">
+
+        <!-- LEFT TEXT -->
+        <div class="cta-gold-left">
+
+            <h2>Join OSPGD Ecosystem</h2>
+
+            <p>
+                Become part of a 360° Pakistan–Germany economic bridge connecting trade,
+                skills, innovation and investment opportunities.
+            </p>
+
+            <p>
+                Submit your details and our team will contact you shortly.
+            </p>
+
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="cta-gold-right">
+
+            <form class="cta-form">
+                 <h2>Reach Us</h2>
+
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number" required>
+
+                <textarea placeholder="Your Details" rows="4"></textarea>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="footer-pro">
+
+    <div class="footer-container">
+
+        <!-- BRAND -->
+        <div class="footer-col brand">
+            <img src="images/logo.png" class="footer-logo" alt="OSPGD Logo">
+
+            <p>
+                Pakistan–Germany Trade & Innovation Desk (OSPGD)<br>
+                A 360° economic facilitation platform connecting trade, skills, innovation and investment.
+            </p>
+
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Trade</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+            <h3>Contact</h3>
+
+            <p><i class="fa-solid fa-envelope"></i> info@ospgd.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Pakistan | Germany</p>
+            <p><i class="fa-solid fa-briefcase"></i> Trade • Skills • Innovation</p>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Get latest updates from OSPGD</p>
+            <form class="newsletter">
+                <div class="news-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 OSPGD • Building Economic Bridges of the Future</p>
+    </div>
+
+</footer>
+
+<div class="chat-float-btn" id="chatToggle">
+    <i class="fas fa-comments"></i>
+    Need Help?
+</div>
+
+<div class="chat-widget" id="chatWidget">
+
+    <div class="chat-header">
+        <div>
+            <h3>OSPGD Assistant</h3>
+            <span>Online Now</span>
+        </div>
+
+        <button id="closeChat">✕</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="message bot">
+            👋 Welcome to OSPGD. How can we help you today?
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Type your message..."
+        >
+
+        <button id="sendBtn">
+            Send
+        </button>
+
+    </div>
+
+</div>
+<script>
+
+const chatToggle = document.getElementById("chatToggle");
+const chatWidget = document.getElementById("chatWidget");
+const closeChat = document.getElementById("closeChat");
+const sendBtn = document.getElementById("sendBtn");
+const userInput = document.getElementById("userInput");
+const chatBody = document.getElementById("chatBody");
+
+chatToggle.onclick = () => {
+    chatWidget.classList.toggle("active");
+};
+
+closeChat.onclick = () => {
+    chatWidget.classList.remove("active");
+};
+
+function addMessage(text,type){
+
+    const msg = document.createElement("div");
+    msg.className = `message ${type}`;
+    msg.innerHTML = text;
+
+    chatBody.appendChild(msg);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function showTyping(){
+
+    const typing = document.createElement("div");
+
+    typing.className = "typing";
+    typing.id = "typing";
+
+    typing.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+    `;
+
+    chatBody.appendChild(typing);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function removeTyping(){
+
+    const typing = document.getElementById("typing");
+
+    if(typing){
+        typing.remove();
+    }
+
+}
+
+function botReply(message){
+
+    showTyping();
+
+    setTimeout(()=>{
+
+        removeTyping();
+
+        let reply =
+        "Thank you for contacting OSPGD. Our team will assist you shortly.";
+
+        const text = message.toLowerCase();
+
+        if(text.includes("trade")){
+            reply = "We support Pakistan-Germany trade and business partnerships.";
+        }
+
+        else if(text.includes("investment")){
+            reply = "We help investors connect with relevant opportunities and stakeholders.";
+        }
+
+        else if(text.includes("contact")){
+            reply = "You can submit the contact form and our team will reach out soon.";
+        }
+
+        addMessage(reply,"bot");
+
+    },1500);
+
+}
+
+function sendMessage(){
+
+    const text = userInput.value.trim();
+
+    if(!text) return;
+
+    addMessage(text,"user");
+
+    userInput.value = "";
+
+    botReply(text);
+
+}
+
+sendBtn.onclick = sendMessage;
+
+userInput.addEventListener("keypress",(e)=>{
+
+    if(e.key === "Enter"){
+        sendMessage();
+    }
+
+});
+
+setTimeout(()=>{
+    chatWidget.classList.add("active");
+},5000);
+
+</script>
+
+</body>
+</html>
